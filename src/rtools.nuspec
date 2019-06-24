@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>rtools</id>
+    <version>3.2</version>
+    <title>RTools</title>
+    <authors>Prof. Brian Ripley, Duncan Murdoch</authors>
+    <owners>sindux</owners>
+    <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
+    <projectUrl>http://cran.r-project.org/bin/windows/Rtools/</projectUrl>
+    <iconUrl>http://www.r-project.org/Rlogo.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This installer includes the MinGW-64 version of gcc pre-4.6.3, compiled by
+Brian Ripley, obtained from his http://www.stats.ox.ac.uk/pub/Rtools/
+web page as multi.zip.  It also contains version 2.0.1 of their toolchain.
+The Cygwin tools and DLLs were updated on November 19, 2013.
+If you already have CYGWIN, please follow the instruction in http://cran.r-project.org/bin/windows/Rtools/Rtools.txt.</description>
+    <summary>A collection of tools for building packages for R under Microsoft Window</summary>
+    <releaseNotes>This package will add c:\Rtools\bin;c:\Rtools\gcc-4.6.3\bin at the end of your PATH. If you have Cygwin, 
+you may want to edit and move it to the front to make sure R picks up this version instead. To confirm installation in R, run system('g++ -v'); install devtools in R using install.packages("devtools"), library("devtools"), then find_rtools().
+3.2: This RTools is compatible with R 3.1.x to 3.2.x.</releaseNotes>
+    <copyright />
+    <tags>rtools statistics r.project</tags>
+  </metadata>
+</package>
