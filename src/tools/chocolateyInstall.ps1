@@ -1,6 +1,6 @@
 ﻿$packageName = 'rtools'
 $installerType = 'EXE'
-$url = 'http://cran.r-project.org/bin/windows/Rtools/Rtools32.exe'
+$url = 'http://cran.r-project.org/bin/windows/Rtools/Rtools35.exe'
 $silentArgs = '/VERYSILENT'
 $validExitCodes = @(0)
 

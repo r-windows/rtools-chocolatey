@@ -4,22 +4,74 @@
     <id>rtools</id>
     <version>3.2</version>
     <title>RTools</title>
-    <authors>Prof. Brian Ripley, Duncan Murdoch</authors>
-    <owners>sindux</owners>
+    <authors>The original collection was put together by Prof. Brian Ripley and Duncan Murdoch; it is currently maintained by Jeroen Ooms.</authors>
+    <owners>abio A. Correa Duran</owners>
+    <docsUrl>https://github.com/rwinlib/base#readme</docsUrl>
+    <iconUrl>https://www.r-project.org/logo/Rlogo.svg</iconUrl>
     <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
     <projectUrl>http://cran.r-project.org/bin/windows/Rtools/</projectUrl>
-    <iconUrl>http://www.r-project.org/Rlogo.jpg</iconUrl>
+    <bugTrackerUrl>https://github.com/rwinlib/rtools35/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/rwinlib/rtools35/issues</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>This installer includes the MinGW-64 version of gcc pre-4.6.3, compiled by
-Brian Ripley, obtained from his http://www.stats.ox.ac.uk/pub/Rtools/
-web page as multi.zip.  It also contains version 2.0.1 of their toolchain.
-The Cygwin tools and DLLs were updated on November 19, 2013.
-If you already have CYGWIN, please follow the instruction in http://cran.r-project.org/bin/windows/Rtools/Rtools.txt.</description>
-    <summary>A collection of tools for building packages for R under Microsoft Window</summary>
-    <releaseNotes>This package will add c:\Rtools\bin;c:\Rtools\gcc-4.6.3\bin at the end of your PATH. If you have Cygwin, 
-you may want to edit and move it to the front to make sure R picks up this version instead. To confirm installation in R, run system('g++ -v'); install devtools in R using install.packages("devtools"), library("devtools"), then find_rtools().
-3.2: This RTools is compatible with R 3.1.x to 3.2.x.</releaseNotes>
-    <copyright />
-    <tags>rtools statistics r.project</tags>
+    <description>Rtools works both for building R itself as well as compiling R packages from source. This Chocolatey package works with the installation defaults, which consist of the standard toolchains based on gcc (32/64 bit mingw-w64) and build utilities (make, bash, tar, sed, etc).</description>
+    <summary>A collection of tools for building R packages under Windows</summary>
+    <releaseNotes>tools Collection 3.5.0.0
+
+This is the Rtools.txt file, which will be installed in the main Rtools directory. See also the README.txt file there, which describes the origin of some of the tools. The tools installed in the Rtools\mingw_32, and Rtools\mingw_64 directories are from the MinGW-w64 distribution.  
+ 
+SYS2
+			  
+This version upgrades the old cygwin utilities to msys2. 
+
+REMAINING TASKS
+
+This installer doesn't install all of the tools necessary to build R or R packages, because of license or size limitations.  The remaining tools are all available online (at no charge) as described below.
+
+TO BUILD R PACKAGES, you may optionally want item 1 below (LaTeX).
+
+TO BUILD R, you do need item 1, and item 2 (Inno Setup) is optional if you would like to build the installer.
+
+As of R 3.2.0, the manuals are optional.  To build them you will need item 3 below. 
+
+The Rtools installer will optionally edit your PATH variable as follows:
+
+PATH=c:\Rtools\bin;others
+
+(where you will substitute appropriate directories for the ones listed above, but please keep the path in the same order as shown. LaTeX and R itself should be installed among the "others".)
+
+REMAINING ITEMS
+
+1. You may install LaTeX, available from
+
+http://www.miktex.org
+  
+LaTeX is used to build .pdf forms of documentation.
+  
+2. You need the Inno Setup installer, available from
+
+http://www.innosetup.com
+  
+to build the R installer.
+
+3. You will need Perl, e.g. from
+
+http://strawberryperl.com/
+  
+to build the manuals.
+
+VERSIONS
+			
+This installer includes separate 32- and 64-bit builds of gcc 4.9.3 and mingw-w64 v3 compiled by Jeroen Ooms and others.  For use with the latter it also includes a copy of libicu55.
+
+The Cygwin tools and DLLs were updated on April 4, 2018. They are 32 bit versions taken from msys2.
+
+Tcl/Tk is version 8.5.8.
+    
+EXISTING CYGWIN INSTALLATIONS
+		
+We no longer use cygwin.</releaseNotes>
+    <copyright>Copyright (C) 2019 The R Foundation for Statistical Computing</copyright>
+    <tags>r r-project r-base admin statistics programming data-analysis programming-language mathematics data-mining statistical-analysis statistical data-acquisition statistical-graphics data-automation</tags>
+    <packageSourceUrl>https://github.com/facorread/rtools-chocolatey</packageSourceUrl>
   </metadata>
 </package>
