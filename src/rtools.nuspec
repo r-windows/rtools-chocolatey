@@ -2,16 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>rtools</id>
-    <version>3.2</version>
+    <version>3.5</version>
     <title>RTools</title>
     <authors>The original collection was put together by Prof. Brian Ripley and Duncan Murdoch; it is currently maintained by Jeroen Ooms.</authors>
-    <owners>abio A. Correa Duran</owners>
+    <owners>Fabio A. Correa Duran</owners>
     <docsUrl>https://github.com/rwinlib/base#readme</docsUrl>
     <iconUrl>https://www.r-project.org/logo/Rlogo.svg</iconUrl>
     <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
     <projectUrl>http://cran.r-project.org/bin/windows/Rtools/</projectUrl>
     <bugTrackerUrl>https://github.com/rwinlib/rtools35/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/rwinlib/rtools35/issues</projectSourceUrl>
+    <projectSourceUrl>https://github.com/rwinlib/rtools35</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Rtools works both for building R itself as well as compiling R packages from source. This Chocolatey package works with the installation defaults, which consist of the standard toolchains based on gcc (32/64 bit mingw-w64) and build utilities (make, bash, tar, sed, etc).</description>
     <summary>A collection of tools for building R packages under Windows</summary>
