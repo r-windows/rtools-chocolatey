@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>rtools</id>
-    <version>3.5</version>
+    <version>3.5.0.4</version>
     <title>RTools</title>
     <authors>The original collection was put together by Prof. Brian Ripley and Duncan Murdoch; it is currently maintained by Jeroen Ooms.</authors>
     <owners>Fabio A. Correa Duran</owners>
     <docsUrl>https://github.com/rwinlib/base#readme</docsUrl>
-    <iconUrl>https://www.r-project.org/logo/Rlogo.svg</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/facorread/rtools-chocolatey/04999f04f9c5e6475decee6d08e254d4a096273e/Rlogo.svg</iconUrl>
     <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
     <projectUrl>http://cran.r-project.org/bin/windows/Rtools/</projectUrl>
     <bugTrackerUrl>https://github.com/rwinlib/rtools35/issues</bugTrackerUrl>
@@ -15,7 +15,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Rtools works both for building R itself as well as compiling R packages from source. This Chocolatey package works with the installation defaults, which consist of the standard toolchains based on gcc (32/64 bit mingw-w64) and build utilities (make, bash, tar, sed, etc).</description>
     <summary>A collection of tools for building R packages under Windows</summary>
-    <releaseNotes>tools Collection 3.5.0.0
+    <releaseNotes>Release notes for Rtools Collection 3.5.0.4:
+
+Workaround for rust linking libgcc_eh instead of libgcc
+
+Automate upload via appveyor
+
+Release notes for Rtools Collection 3.5.0.0:
 
 This is the Rtools.txt file, which will be installed in the main Rtools directory. See also the README.txt file there, which describes the origin of some of the tools. The tools installed in the Rtools\mingw_32, and Rtools\mingw_64 directories are from the MinGW-w64 distribution.  
  
