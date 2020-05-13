@@ -2,81 +2,53 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>rtools</id>
-    <version>3.5.0.4</version>
+    <version>4.0.0</version>
     <title>RTools</title>
     <authors>The original collection was put together by Prof. Brian Ripley and Duncan Murdoch; it is currently maintained by Jeroen Ooms.</authors>
     <owners>Fabio A. Correa Duran</owners>
-    <docsUrl>https://github.com/rwinlib/base#readme</docsUrl>
+    <docsUrl>https://github.com/r-windows/docs/</docsUrl>
     <iconUrl>https://rawcdn.githack.com/facorread/rtools-chocolatey/04999f04f9c5e6475decee6d08e254d4a096273e/Rlogo.svg</iconUrl>
     <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
     <projectUrl>http://cran.r-project.org/bin/windows/Rtools/</projectUrl>
-    <bugTrackerUrl>https://github.com/rwinlib/rtools35/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/rwinlib/rtools35</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/r-windows/rtools-installer/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/r-windows/rtools-installer</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Rtools works both for building R itself as well as compiling R packages from source. This Chocolatey package works with the installation defaults, which consist of the standard toolchains based on gcc (32/64 bit mingw-w64) and build utilities (make, bash, tar, sed, etc).</description>
+    <description>Rtools is the toolchain bundle that is used on Windows to build R base and R packages that contain compiled code. You only need Rtools if you want to compile R packages from source that contain C/C++/Fortran. By default, R for Windows installs the precompiled binary packages from CRAN, for which you do not need rtools. This Chocolatey package works with the installation defaults, which consist of the standard toolchains based on gcc (32/64 bit mingw-w64) and build utilities (make, bash, tar, sed, etc).</description>
     <summary>A collection of tools for building R packages under Windows</summary>
-    <releaseNotes>Release notes for Rtools Collection 3.5.0.4:
+    <releaseNotes>RELEASE NOTE FOR THE RTOOLS CHOCOLATEY PACKAGE VERSIONS 4.0.0 AND UP
 
-Workaround for rust linking libgcc_eh instead of libgcc
+This Chocolatey package does not set the PATH environment variable anymore; the end user must follow the instructions below to select a version of RTools.
 
-Automate upload via appveyor
+INSTALLING RTOOLS40
 
-Release notes for Rtools Collection 3.5.0.0:
+Rtools40 does not conflict with other versions of Rtools and can be installed alongside existing Rtools 3.5 installations.
 
-This is the Rtools.txt file, which will be installed in the main Rtools directory. See also the README.txt file there, which describes the origin of some of the tools. The tools installed in the Rtools\mingw_32, and Rtools\mingw_64 directories are from the MinGW-w64 distribution.  
- 
-SYS2
-			  
-This version upgrades the old cygwin utilities to msys2. 
+Use rtools40-x86_64.exe on 64 bit Windows (recommended, includes i386 and x64 toolchains)
 
-REMAINING TASKS
+Use rtools40-i686.exe on 32 bit Windows (includes i386 toolchain only)
 
-This installer doesn't install all of the tools necessary to build R or R packages, because of license or size limitations.  The remaining tools are all available online (at no charge) as described below.
+Rtools does not put itself on the PATH. You can add the following line to your ~/.Renviron file (where ~ is your Documents folder by default) to help R find rtools when installing packages.
 
-TO BUILD R PACKAGES, you may optionally want item 1 below (LaTeX).
+PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
 
-TO BUILD R, you do need item 1, and item 2 (Inno Setup) is optional if you would like to build the installer.
+ABOUT RTOOLS40
 
-As of R 3.2.0, the manuals are optional.  To build them you will need item 3 below. 
+This is the windows toolchain and build environment for the R project. The current branch is based on:
 
-The Rtools installer will optionally edit your PATH variable as follows:
+gcc 8.3.0 (dwarf, seh)
 
-PATH=c:\Rtools\bin;others
+mingw-w64 v5
 
-(where you will substitute appropriate directories for the ones listed above, but please keep the path in the same order as shown. LaTeX and R itself should be installed among the "others".)
+winpthreads
 
-REMAINING ITEMS
+Rtools40 uses the msys2 build environment. One major benefit is that msys2 includes a fantastic package manager pacman that we can use to properly build, distribute, and install external c/c++ libraries for CRAN packages.
 
-1. You may install LaTeX, available from
+Taken from:
 
-https://miktex.org
-  
-LaTeX is used to build .pdf forms of documentation.
-  
-2. You need the Inno Setup installer, available from
+https://github.com/r-windows/rtools-installer
 
-http://www.innosetup.com
-  
-to build the R installer.
-
-3. You will need Perl, e.g. from
-
-http://strawberryperl.com/
-  
-to build the manuals.
-
-VERSIONS
-			
-This installer includes separate 32- and 64-bit builds of gcc 4.9.3 and mingw-w64 v3 compiled by Jeroen Ooms and others.  For use with the latter it also includes a copy of libicu55.
-
-The Cygwin tools and DLLs were updated on April 4, 2018. They are 32 bit versions taken from msys2.
-
-Tcl/Tk is version 8.5.8.
-    
-EXISTING CYGWIN INSTALLATIONS
-		
-We no longer use cygwin.</releaseNotes>
-    <copyright>Copyright (C) 2019 The R Foundation for Statistical Computing</copyright>
+https://github.com/r-windows/docs/blob/master/rtools40.md</releaseNotes>
+    <copyright>Copyright (C) 2020 The R Foundation for Statistical Computing</copyright>
     <tags>r r-project r-base admin statistics programming data-analysis programming-language mathematics data-mining statistical-analysis statistical data-acquisition statistical-graphics data-automation</tags>
     <packageSourceUrl>https://github.com/facorread/rtools-chocolatey</packageSourceUrl>
   </metadata>
