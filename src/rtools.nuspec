@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>rtools</id>
-    <version>4.0.0.20210502</version>
+    <version>4.0.0.20220112</version>
     <title>RTools</title>
     <authors>The original collection was put together by Prof. Brian Ripley and Duncan Murdoch; it is currently maintained by Jeroen Ooms.</authors>
-    <owners>Fabio A. Correa Duran</owners>
+    <owners>Jeroen Ooms, Fabio A. Correa Duran</owners>
     <docsUrl>https://github.com/r-windows/docs/</docsUrl>
     <iconUrl>https://rawcdn.githack.com/facorread/rtools-chocolatey/04999f04f9c5e6475decee6d08e254d4a096273e/Rlogo.svg</iconUrl>
     <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
