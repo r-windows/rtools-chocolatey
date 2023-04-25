@@ -2,53 +2,29 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>rtools</id>
-    <version>4.0.0.20220206</version>
+    <version>4.3.5550</version>
     <title>RTools</title>
-    <authors>The original collection was put together by Prof. Brian Ripley and Duncan Murdoch; it is currently maintained by Jeroen Ooms.</authors>
+    <authors>Previous versions were put together by Prof. Brian Ripley, Duncan Murdoch and Jeroen Ooms. It is currently maintained by Tomas Kalibera.</authors>
     <owners>Jeroen Ooms, Fabio A. Correa Duran</owners>
-    <docsUrl>https://github.com/r-windows/docs/</docsUrl>
-    <iconUrl>https://rawcdn.githack.com/facorread/rtools-chocolatey/04999f04f9c5e6475decee6d08e254d4a096273e/Rlogo.svg</iconUrl>
-    <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
-    <projectUrl>https://github.com/r-windows/</projectUrl>
-    <bugTrackerUrl>https://github.com/r-windows/rtools-installer/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/r-windows/rtools-installer</projectSourceUrl>
+    <docsUrl>https://cran.r-project.org/bin/windows/Rtools/</docsUrl>
+    <iconUrl>https://www.r-project.org/logo/Rlogo.svg</iconUrl>
+    <licenseUrl>https://www.r-project.org/Licenses/</licenseUrl>
+    <projectUrl>https://www.r-project.org</projectUrl>
+    <bugTrackerUrl>https://bugs.r-project.org/</bugTrackerUrl>
+    <projectSourceUrl>https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Rtools is the toolchain bundle that is used on Windows to build R base and R packages that contain compiled code. You only need Rtools if you want to compile R packages from source that contain C/C++/Fortran. By default, R for Windows installs the precompiled binary packages from CRAN, for which you do not need rtools. This Chocolatey package works with the installation defaults, which consist of the standard toolchains based on gcc (32/64 bit mingw-w64) and build utilities (make, bash, tar, sed, etc).</description>
     <summary>A collection of tools for building R packages under Windows</summary>
-    <releaseNotes>RELEASE NOTE FOR THE RTOOLS CHOCOLATEY PACKAGE VERSIONS 4.0.0 AND UP
+    <releaseNotes>Rtools is a toolchain bundle used for building R packages from source (those that need compilation of C/C++ or Fortran code) and for build R itself. Rtools43 is used for R-devel, the development version of R since revision 83535 and is intended for R 4.3.0.
 
-This Chocolatey package does not set the PATH environment variable anymore; the end user must follow the instructions below to select a version of RTools.
+Rtools43 consists of Msys2 build tools, GCC 12/MinGW-w64 compiler toolchain, libraries built using the toolchain, and QPDF. Rtools43 supports 64-bit Windows and UCRT as the C runtime.
 
-INSTALLING RTOOLS40
-
-Rtools40 does not conflict with other versions of Rtools and can be installed alongside existing Rtools 3.5 installations.
-
-Use rtools40-x86_64.exe on 64 bit Windows (recommended, includes i386 and x64 toolchains)
-
-Use rtools40-i686.exe on 32 bit Windows (includes i386 toolchain only)
-
-Rtools does not put itself on the PATH. You can add the following line to your ~/.Renviron file (where ~ is your Documents folder by default) to help R find rtools when installing packages.
-
-PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
-
-ABOUT RTOOLS40
-
-This is the windows toolchain and build environment for the R project. The current branch is based on:
-
-gcc 8.3.0 (dwarf, seh)
-
-mingw-w64 v5
-
-winpthreads
-
-Rtools40 uses the msys2 build environment. One major benefit is that msys2 includes a fantastic package manager pacman that we can use to properly build, distribute, and install external c/c++ libraries for CRAN packages.
+Compared to Rtools42, Rtools43 has newer versions of three core components: GCC, MinGW-w64, and binutils. It is therefore recommended to re-compile all code with the new toolchain to avoid problems. The code compiled by even earlier versions of Rtools is incompatible due to use of MSVCRT and has to be recompiled with Rtools43 for use in R packages.
 
 Taken from:
 
-https://github.com/r-windows/rtools-installer
-
-https://github.com/r-windows/docs/blob/master/rtools40.md</releaseNotes>
-    <copyright>Copyright (C) 2020 The R Foundation for Statistical Computing</copyright>
+https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html</releaseNotes>
+    <copyright>Copyright (C) 2023 The R Foundation for Statistical Computing</copyright>
     <tags>r r-project r-base admin statistics programming data-analysis programming-language mathematics data-mining statistical-analysis statistical data-acquisition statistical-graphics data-automation</tags>
     <packageSourceUrl>https://github.com/facorread/rtools-chocolatey</packageSourceUrl>
   </metadata>

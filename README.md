@@ -1,4 +1,4 @@
-# Release Notes for Versions 4.0.0 and up
+# Release Notes for Versions 4.3.0 and up
 
 This Chocolatey package does not set the PATH environment variable anymore; the end user must follow upstream installation instructions to select a version of RTools.
 
