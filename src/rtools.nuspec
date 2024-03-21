@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>rtools</id>
-    <version>4.3.5958</version>
+    <version>4.4.6104</version>
     <title>RTools</title>
     <authors>Previous versions were put together by Prof. Brian Ripley, Duncan Murdoch and Jeroen Ooms. It is currently maintained by Tomas Kalibera.</authors>
     <owners>Jeroen Ooms, Fabio A. Correa Duran</owners>
@@ -11,19 +11,17 @@
     <licenseUrl>https://www.r-project.org/Licenses/</licenseUrl>
     <projectUrl>https://www.r-project.org</projectUrl>
     <bugTrackerUrl>https://bugs.r-project.org/</bugTrackerUrl>
-    <projectSourceUrl>https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/</projectSourceUrl>
+    <projectSourceUrl>https://cran.r-project.org/bin/windows/Rtools/rtools44/</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Rtools is the toolchain bundle that is used on Windows to build R base and R packages that contain compiled code. You only need Rtools if you want to compile R packages from source that contain C/C++/Fortran. By default, R for Windows installs the precompiled binary packages from CRAN, for which you do not need rtools. This Chocolatey package works with the installation defaults, which consist of the standard toolchains based on gcc (32/64 bit mingw-w64) and build utilities (make, bash, tar, sed, etc).</description>
     <summary>A collection of tools for building R packages under Windows</summary>
-    <releaseNotes>Rtools is a toolchain bundle used for building R packages from source (those that need compilation of C/C++ or Fortran code) and for build R itself. Rtools43 is used for R-devel, the development version of R since revision 83535 and is intended for R 4.3.0.
+    <releaseNotes>Rtools is a toolchain bundle used for building R packages from source (those that need compilation of C/C++ or Fortran code) and for build R itself.
 
-Rtools43 consists of Msys2 build tools, GCC 12/MinGW-w64 compiler toolchain, libraries built using the toolchain, and QPDF. Rtools43 supports 64-bit Windows and UCRT as the C runtime.
-
-Compared to Rtools42, Rtools43 has newer versions of three core components: GCC, MinGW-w64, and binutils. It is therefore recommended to re-compile all code with the new toolchain to avoid problems. The code compiled by even earlier versions of Rtools is incompatible due to use of MSVCRT and has to be recompiled with Rtools43 for use in R packages.
+Rtools44 consists of Msys2 build tools, GCC 13/MinGW-w64 compiler toolchain, libraries built using the toolchain, and QPDF. Rtools44 supports 64-bit Windows and UCRT as the C runtime.
 
 Taken from:
 
-https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html</releaseNotes>
+https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html</releaseNotes>
     <copyright>Copyright (C) 2023 The R Foundation for Statistical Computing</copyright>
     <tags>r r-project r-base admin statistics programming data-analysis programming-language mathematics data-mining statistical-analysis statistical data-acquisition statistical-graphics data-automation</tags>
     <packageSourceUrl>https://github.com/r-windows/rtools-chocolatey</packageSourceUrl>
