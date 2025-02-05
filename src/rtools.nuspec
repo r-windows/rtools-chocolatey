@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>rtools</id>
-    <version>4.4.6335</version>
+    <version>4.4.6414</version>
     <title>RTools</title>
     <authors>Previous versions were put together by Prof. Brian Ripley, Duncan Murdoch and Jeroen Ooms. It is currently maintained by Tomas Kalibera.</authors>
     <owners>Jeroen Ooms, Fabio A. Correa Duran</owners>
