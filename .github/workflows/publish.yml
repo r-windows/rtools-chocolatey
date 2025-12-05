@@ -1,0 +1,18 @@
+name: Publish to chocolatey
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+
+      - uses: actions/checkout@v6
+
+      - name: Uploading files
+        run: |
+          cd src
+          choco pack
+          choco apikey --key ${{ secrets.CHOCOKEY }} --source https://push.chocolatey.org/
+          choco push --source https://push.chocolatey.org/
