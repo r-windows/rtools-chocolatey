@@ -3,9 +3,9 @@
   FileType       = 'exe'
   SilentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES'
   Url            = 'https://github.com/r-windows/rtools-installer/releases/download/2020-05-05/rtools40-i686.exe'
-  Url64bit       = 'https://github.com/r-windows/rtools-chocolatey/releases/download/6691/rtools45-6691-6492.exe'
+  Url64bit       = 'https://github.com/r-windows/rtools-chocolatey/releases/download/6768/rtools45-6768-6492.exe'
   Checksum       = '00ef9bb70c83c2397ec8460a7522039a7ebe5b53d22dcb7a5aba924ee6d07eb5bbc513b53f2d25136145173a173f0bfca435ee003fba6d3d1c8426bd5d8660a9'
-  Checksum64     = '5720b6bc5a63f568b35c9c82a48838f0542f99368d83a9021d44e85a8c7c34ba16a42774041daaeaca52252e5f00c455c5f3d7db242ca1c7cf4a99a530076a2d'
+  Checksum64     = 'c7de6d6af10a1aa9f5a56bb823c6bd9912ff79a8b3e55c6c08da50457a0a7cc02ede0853ae5a0a3b2e5eeaa5ed6a30d08ca3480c34adf0cb71fac6eb6b01b2d6'
   ChecksumType   = 'sha512'
   ChecksumType64 = 'sha512'
 }
